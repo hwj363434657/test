@@ -1,0 +1,36 @@
+create table student1(
+   id int(10),
+   name varchar(20),
+   age int(3) 
+);
+ show tables;
+ show create table student;
+ describe student;
+ drop table student;
+表的约束：
+    主键约束 primary key 
+    外键约束 foreign key 
+    非空约束 not noll 不为空
+    唯一性约束 unique 不重复
+    默认值约束 default 用来设置字段的默认值
+
+create table student(
+    sid int primary key auto_increament,
+    name varchar(2) unique,
+    age int default 20,
+    address varchar(20) not null
+
+);
+create table course(
+   couseid int ,
+   sid int ,
+   grade float,
+   primary key(courseid,sid)  
+);
+insert into 表名（字段名1，字段名2.。。） values （值1，值2.。）,(值1，值2..);
+字符串''
+交叉连接 笛卡尔积
+内连接 只查出符合条件的数据
+外连接 分主表从表 以主表为主的数据全部查出 从表不一定
+start transaction;
+commit;
